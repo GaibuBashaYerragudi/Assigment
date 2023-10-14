@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer Survay Form </title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <h3 style="text-align: center;">Customer Survey Form</h3>
+        <div class="sub">
+
+          <form action="welcome.html" id="myform">
+
+           <label >First Name</label>
+            <input style="width:15vw; width:31vw; " type="text" placeholder="First Name"  required
+            oninvalid="this.setCustomValidity('firstname?')"
+            oninput="this.setCustomValidity('')">
+
+            <label >Last Name</label> 
+             <input style="width:31vw;" type="text" placeholder="Last Name"required
+             oninvalid="this.setCustomValidity('lastname?')"  oninput="this.setCustomValidity('')">
+             <label style="padding-right: 28vw;" >Email</label>
+             <input style="width:31vw;" type="text" placeholder="abc@gmail.com" required
+             oninvalid="this.setCustomValidity('emailid?')"  oninput="this.setCustomValidity('')">
+            <label >Mobile No</label>
+            <input style="width:31vw;" type="text" placeholder="Enter a Mobile No" required
+            oninvalid="this.setCustomValidity('mobile no?')"  oninput="this.setCustomValidity('')">
+             <label style="padding-right: 27vw;">Country</label>
+            <select style="width:31vw;" required>
+                <option>Austalia</option>
+                <option>canada</option>
+                <option>belgium</option>
+                <option>china</option>
+                <option>iraq</option>
+                <option>india</option>
+                <option>germany</option>
+                <option>pakistan</option>
+            </select>
+             <label style="padding-right: 28vw;"> DOB</label>
+             <input style="width:15vw;"  type="date" required
+             oninvalid="this.setCustomValidity('DOB?')" ninput="this.setCustomValidity('')"
+             >
+             <label>Profession</label>
+             <input  style="width:15vw;"type="text" placeholder="enter ur profession" required>
+             <!------------------------------------------------->
+             <br>
+            Is this first time Your are using our Product & service?
+           <br>
+            <input type="radio" value="Yes" name="class1" > Yes
+            <input type="radio" value="No" name="class1" > No
+            <br>
+            would You suggestion to your friends and colleague?
+            <br>
+            <input type="radio" value="Yes" name="class2" > Yes
+            <input type="radio" value="No" name="class2" > No
+            <br>
+            How satisfied are you with our Comapany Overall?
+            <br>
+            <input type="radio" value="satisfied" name="class3" > satisfied
+            <input type="radio" value="undecided" name="class3" > undecided
+            <input type="radio" value="unsatisfied" name="class3" > unsatisfied
+            <br>
+            Do you have suggestion to improve our service?
+            <br>
+            <textarea style="width:28vw"type="feedback"  placeholder="please give your feedback Here" rows=5 cols=40></textarea>
+            <br>
+            <!---------------------------------------------------------------------->
+            <button id="button">Submit</button>
+             
+            <input id="reset" type="reset" value="Reset">
+        </form>
+        </div>
+
+    </body>
+    <footer id="footer">
+        @2023 Customer Survay Form .All Rights Reserved | Design by <P style="color: rgb(30, 183, 210);">Basha.</P>
+    </footer>
+</html
