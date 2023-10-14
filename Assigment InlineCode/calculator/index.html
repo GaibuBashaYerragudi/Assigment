@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+       <!--------------------styling-----------------------------> 
+        <style>
+           *{
+    margin: 0;
+    padding: 0;
+   font-family:'popins',sans-serif;
+   background-color: rgb(202, 190, 190);
+}
+.main{
+    text-align: center;
+    background-color: gray;
+}
+.row button{
+    width: 70px;
+    padding: 20px;
+    color: aliceblue;
+    cursor: pointer; 
+}
+.row{
+    margin: 1px 0;
+}
+#button1{
+    background-color: rgb(43, 41, 41);
+}
+.input{
+    padding:  20px;
+    width: 175px;
+}
+.inu button{
+    cursor: pointer;
+    width: 70px;
+    padding: 20px;
+}
+        </style>
+
+
+
+    </head>
+    <body>
+        <div class="main">
+           <div class="inu" >
+                <input class="input" type="text"/>
+                <button style="background-color: green;"  id="button1">Ac</button>
+            </div>
+          <div class="row">
+             <button id="button1">9</button>
+             <button id="button1">8</button>
+             <button id="button1">7</button>
+             <button style="background-color: gray;"  id="button1">+</button>
+          </div>
+          <div class="row">
+            <button id="button1">4</button>
+            <button id="button1">5</button>
+            <button id="button1">6</button>
+            <button style="background-color: gray;"  id="button1">-</button>
+         </div>
+         <div class="row">
+            <button id="button1">1</button>
+            <button id="button1"1>2</button>
+            <button id="button1">3</button>
+            <button style="background-color: gray;"  id="button1">/</button>
+         </div>
+         <div class="row">
+            <button id="button1">.</button>
+            <button id="button1">0</button>
+            <button id="button1">=</button>
+            <button style="background-color: gray;"  id="button1">*</button>
+         </div>
+
+        </div>
+
+        <!-----------script------------------------------------->
+        <script >
+          let string="";
+   let buttons=document.querySelectorAll('#button1','#button');
+    Array.from(buttons).forEach((button)=>{
+    button.addEventListener('click',(e)=>{
+        if(e.target.innerHTML=='=')
+        {
+            string=eval(string);
+
+            document.querySelector('input').value=string ;
+
+        }
+        else if(e.target.innerHTML == 'Ac')
+        {
+            string="";
+            document.querySelector('input').value= string;
+        }
+        else{
+            console.log(e.target)
+            string=string + e.target.innerHTML;
+
+            document.querySelector('input').value=string;
+        }
+})
+})
+        </script>
+    </body>
+</html>
